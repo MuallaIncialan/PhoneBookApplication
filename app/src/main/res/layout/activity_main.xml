@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:weightSum="6"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="İsim ve Soyisim Girin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eIsim"
+        android:text="Telefon Numarası Girin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/eIsim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="İsim ve Soyisim Giriniz..."
+        android:inputType="textPersonName"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/bCikis"
+        android:layout_toStartOf="@+id/bCikis" />
+
+    <EditText
+        android:id="@+id/eTelefon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:hint="Telefon Numarası Giriniz.."
+        android:inputType="phone"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/bEkle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Kişi Ekle"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/eTelefon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/eGetir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="İsim Giriniz..."
+        android:inputType="textPersonName"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/bSil"
+        android:layout_toLeftOf="@+id/bGuncelle"
+        android:layout_toStartOf="@+id/bGuncelle" />
+
+    <Button
+        android:id="@+id/bSil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/bGuncelle"
+        android:layout_alignBottom="@+id/bGuncelle"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Kişiyi Sil"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/bGuncelle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Güncelle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/eGetir"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Kişiyi Getir"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/bGetir"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bEkle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Kişileri Getir"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/bKisiGetir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bGuncelle"
+        android:layout_alignBottom="@+id/bGuncelle"
+
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="İsmi Getir"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/bCikis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/eIsim"
+        android:layout_marginBottom="31dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Çıkış"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toEndOf="@+id/eGetir"
+        android:layout_toRightOf="@+id/eGetir"
+        android:text="Button" />
+
+</RelativeLayout>
